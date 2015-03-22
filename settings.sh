@@ -7,16 +7,21 @@ CFPreferencesAppSynchronize('$1')
 END
 }
 
+PLIST=/usr/libexec/PlistBuddy
+
+
 # ==============================================
 # Terminal
 # ==============================================
 echo "Setting Terminal preferences"
 
+FILE=~/Library/Preferences/com.apple.Terminal.plist
+
 # Set terminal window size 
-# /usr/libexec/PlistBuddy -c "Add :'Window Settings':Pro:rowCount integer" ~/Library/Preferences/com.apple.Terminal.plist
-/usr/libexec/PlistBuddy -c "Set :'Window Settings':Pro:rowCount 40" ~/Library/Preferences/com.apple.Terminal.plist
-# /usr/libexec/PlistBuddy -c "Add :'Window Settings':Pro:columnCount integer" ~/Library/Preferences/com.apple.Terminal.plist
-/usr/libexec/PlistBuddy -c "Set :'Window Settings':Pro:columnCount 160" ~/Library/Preferences/com.apple.Terminal.plist
+$PLIST -c "Delete ':Window Settings:Pro:rowCount'" $FILE &>/dev/null
+$PLIST -c "Add ':Window Settings:Pro:rowCount' integer 40" $FILE
+$PLIST -c "Delete ':Window Settings:Pro:columnCount'" $FILE &>/dev/null
+$PLIST -c "Add ':Window Settings:Pro:columnCount' integer 160" $FILE
 
 # Set "Pro" as the default
 defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
