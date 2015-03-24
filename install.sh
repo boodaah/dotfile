@@ -12,7 +12,7 @@ sudo mkdir -p "/usr/local/bin"
 
 # copy bash files
 cp .bash_aliases ~/.bash_aliases
-cp .bash_funcitons ~/.bash_funcitons
+cp .bash_functions ~/.bash_functions
 cp .bash_profile ~/.bash_profile
 cp .bash_prompt ~/.bash_prompt
 cp .bashrc ~/.bashrc
