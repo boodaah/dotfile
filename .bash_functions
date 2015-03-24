@@ -25,38 +25,38 @@ function crlf2lf {
 
 
 # convert mkv files to mp4
-function ff-copy {
+function ffcopy {
     ffmpeg -i $1 -c:v copy -c:a copy "${1%.*}.2ch.x264.mp4"
 }
 
-function ff-copy-batch {
+function ffcopybatch {
     for i in *.mkv; do ffmpeg -i $i -c:v copy -c:a copy "${i%.*}.2ch.x264.mp4";done
 }
 
-function ff-audio {
+function ffaudio {
     #ffmpeg -i $1 -c:v copy -c:a libfaac -ac 2 -bsf:a aac_adtstoasc "${1%.*}.2ch.x264.mp4"
     ffmpeg -i $1 -c:v copy -c:a aac -strict -2 -ac 2 -bsf:a aac_adtstoasc "${1%.*}.2ch.x264.mp4"
 }
 
-function ff-audio-batch {
+function ffaudiobatch {
     #for i in *.mkv; do ffmpeg -i $i -c:v copy -c:a libfaac -ac 2 -bsf:a aac_adtstoasc "${i%.*}.2ch.x264.mp4";done
     for i in *.mkv; do ffmpeg -i $i -c:v copy -c:a aac -strict -2 -ac 2 -bsf:a aac_adtstoasc "${i%.*}.2ch.x264.mp4";done
 }
 
-function ff-video {
+function ffvideo {
     ffmpeg -i $1 -c:v libx264 -c:a copy "${1%.*}.2ch.x264.mp4"
 }
 
-function ff-video-batch {
+function ffvideobatch {
     for i in *.mkv; do ffmpeg -i $i -c:v libx264 -c:a copy "${i%.*}.2ch.x264.mp4";done
 }
 
-function ff-full {
+function fffull {
     #ffmpeg -i $1 -c:v libx264 -c:a libfaac -ac 2 -bsf:a aac_adtstoasc "${1%.*}.2ch.x264.mp4"
     ffmpeg -i $1 -c:v libx264 -c:a aac -strict -2 -ac 2 -bsf:a aac_adtstoasc "${1%.*}.2ch.x264.mp4"
 }
 
-function ff-full-batch {
+function fffullbatch {
     #for i in *.mkv; do ffmpeg -i $i -c:v libx264 -c:a libfaac -ac 2 -bsf:a aac_adtstoasc "${i%.*}.2ch.x264.mp4";done
     for i in *.mkv; do ffmpeg -i $i -c:v libx264 -c:a aac -strict -2 -ac 2 -bsf:a aac_adtstoasc "${i%.*}.2ch.x264.mp4";done
 }
