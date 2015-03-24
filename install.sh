@@ -10,7 +10,21 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 sudo mkdir -p "/usr/local/lib"
 sudo mkdir -p "/usr/local/bin"
 
+# copy bash files
+cp .bash_aliases ~/.bash_aliases
+cp .bash_funcitons ~/.bash_funcitons
+cp .bash_profile ~/.bash_profile
+cp .bash_prompt ~/.bash_prompt
+cp .bashrc ~/.bashrc
+source ~/.bash_profile
+
+# copy git files
+cp .gitconfig ~/.gitconfig
+cp .gitignore_global ~/.gitignore_global
+
 # homebrew
-# cask
+sh homebrew.sh
+
 # settings
 sh settings.sh
+

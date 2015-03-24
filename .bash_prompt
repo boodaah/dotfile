@@ -1,0 +1,54 @@
+# tput Color Capabilities:
+#     tput setab [1-7] – Set a background color using ANSI escape
+#     tput setb [1-7] – Set a background color
+#     tput setaf [1-7] – Set a foreground color using ANSI escape
+#     tput setf [1-7] – Set a foreground color
+
+# tput Text Mode Capabilities:
+#     tput bold – Set bold mode
+#     tput dim – turn on half-bright mode
+#     tput smul – begin underline mode
+#     tput rmul – exit underline mode
+#     tput rev – Turn on reverse mode
+#     tput smso – Enter standout mode (bold on rxvt)
+#     tput rmso – Exit standout mode
+#     tput sgr0 – Turn off all attributes
+
+# Color Code for tput:
+#     0 – Black
+#     1 – Red
+#     2 – Green
+#     3 – Yellow
+#     4 – Blue
+#     5 – Magenta
+#     6 – Cyan
+#     7 – White
+
+
+
+black=$(tput setaf 0)
+red=$(tput setaf 1)
+green=$(tput setaf 2)
+yellow=$(tput setaf 3)
+blue=$(tput setaf 4)
+magenta=$(tput setaf 5)
+cyan=$(tput setaf 6)
+white=$(tput setaf 7)
+
+bold=$(tput bold)
+reverse=$(tput rev)
+
+reset=$(tput sgr0)
+
+PS1=""
+PS1+="\n"                   # newline
+PS1+="${reset}"             # reset
+PS1+="${red}\u "            # username
+PS1+="${reset}at "          # at
+PS1+="${yellow}\H "         # hostname
+PS1+="${reset}in "          # in
+PS1+="${green}\w"           # working directory
+PS1+="\n"                   # newline
+PS1+="\[${reset}\]\$ "      # $ prompt
+
+export PS1

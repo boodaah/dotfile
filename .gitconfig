@@ -1,0 +1,6 @@
+[user]
+    name = boodaah
+    email = boodaah@me.com
+[core]
+    autocrlf = input
+    excludesfile = /Users/kennethferguson/.gitignore_global
