@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # man pages for Google Chrome (Safari won't work like this)
 function gman {
     man -P cat "$1" | col -b > "/tmp/$1"

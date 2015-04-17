@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # To enclose single quotes within other single quotes, it needs to be escaped using '\'
 # or in other terms each inner single quote needs to be replaced with '\''
 #   grep 'text' source.txt    becomes      alias sample='grep '\''text'\'' source.txt'

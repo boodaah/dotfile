@@ -55,3 +55,8 @@ Temporary Items
 ### Vagrant ###
 .vagrant/
 
+
+### Codekit ###
+config.codekit
+.codekit-cache
+

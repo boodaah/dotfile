@@ -6,7 +6,9 @@ fi
 
 brew update
 
+brew install dos2unix
 brew install git
+brew install libdvdcss
 brew install tree
 brew install unrar
 brew install wget
@@ -18,7 +20,7 @@ brew install caskroom/cask/brew-cask
 ## Install brew cask apps
 brew cask install 1password
 brew cask install appzapper
-brew cask install asepsis
+# brew cask install asepsis
 brew cask install atom
 brew cask install bittorrent-sync
 brew cask install blender
@@ -26,14 +28,15 @@ brew cask install brackets
 brew cask install burn
 brew cask install camtwist
 brew cask install ccleaner
-brew cask install chrome-remote-desktop-host
+# brew cask install chrome-remote-desktop-host
+brew cask install chromecast
 brew cask install chronicle
+brew cask install clamxav
 brew cask install coda
 brew cask install codekit
 brew cask install colorpicker
 brew cask install colorpicker-hex
 brew cask install dropbox
-brew cask install dropletmanager
 brew cask install firefox
 brew cask install flash
 brew cask install fontexplorer-x-pro
@@ -52,6 +55,7 @@ brew cask install renamer
 brew cask install screenflow
 brew cask install sequel-pro
 brew cask install skype
+brew cask install slack
 brew cask install steam
 brew cask install sublime-text
 brew cask install tower
@@ -67,7 +71,6 @@ brew cask install vlc
 # brew cask install logitech-gaming-software
 # brew cask install mumble
 # brew cask install obs
-# brew cask install private-internet-access
 # brew cask install transmission
 # brew cask install xld
 
