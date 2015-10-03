@@ -1,33 +1,60 @@
 # dotfile
 
-Fresh install script for OSX -- Based on my personal preferences.
+Fresh install for OSX -- Based on my personal preferences.
 
-##Install
+#### Install El Capitan
 
-#### Download and Install
-```
-(mkdir -p /tmp/dotfile && cd /tmp/dotfile && curl -L https://github.com/boodaah/dotfile/archive/master.tar.gz | tar zx --strip 1 && sh ./install.sh)
-```
+Run a fresh install of El Capitan filling prompts for Apple ID and default settings.
 
-####Download Only
-```
-curl -L https://github.com/boodaah/dotfile/archive/master.tar.gz | tar zx --strip 1
-```
+#### Rename computer
 
-## Goal
+Open System Preferences > Sharing and enter name for computer.
 
-The goal of this dotfile is to automate the process of getting an operating system from a stock install to a fully functional machine and should be the first thing downloaded and run to get the computer set up.
+#### Run updates
 
-## Details
+Open App Store and install updates.
 
-- sets up the bash profile files
-- sets up the git configuration files
-- installs homebrew
-- installs commandline binaries
-- installs applications via `brew-cask`
-- sets up the OSX preferences
+#### Download Mac App Store purchases
 
-## TODO
-- allow the gitconfig to work for other users and directories
-- setup the ssh keys
-- etc
++ 1Password
++ affinity designer
++ affinity photo
++ boson
++ colorschemer studio
++ garageband
++ icon slate
++ imovie
++ keynote
++ kindle
++ moom
++ netview
++ numbers
++ pages
++ pcalc
++ pixelmator
++ slack
++ stockfish
++ xcode
+
+#### Open and configure Terminal
+
+Open Terminal and enter: `bash -c "$(curl -fsSL https://goo.gl/Bamqzw)"` 
+
+or `(mkdir -p /tmp/dotfile && cd /tmp/dotfile && curl -L -o terminal.sh https://raw.githubusercontent.com/boodaah/dotfile/master/terminal.sh && sh ./terminal.sh)`
+
+Quit and restart Terminal.
+
+#### Download and install Dropbox
+
+Enter this command into Terminal: `bash -c "$(curl -fsSL https://goo.gl/sm6F3V)"`
+
+or `(mkdir -p /tmp/dotfile && cd /tmp/dotfile && curl -L -G -d full=1 -d plat=mac -o DropboxInstaller.dmg https://www.dropbox.com/download && open DropboxInstaller.dmg)`
+
+Run the installer and enter credentials and allow the sync to run.
+
+// TODO: Enable "Share screenshots using Dropbox"
+
+#### Switch to Dropbox folder and start dotfile scripts
+
+In Terminal, enter these commands: `cd ~/Dropbox/Software/dotfile && sh ./install.sh`
+

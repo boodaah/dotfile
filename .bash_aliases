@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # remove .DS_Store files
-alias ds="sudo find -x . -iname '.DS_Store' -delete"
+alias ds="sudo find -x . -iname '.DS_Store'"
 
 
 # git push
