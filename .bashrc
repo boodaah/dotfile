@@ -18,10 +18,11 @@ export HISTIGNORE="history*:man*"
 
 
 # set PATH
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+export PATH="~/.composer/vendor/bin:~/.npm/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 
 
 # set EDITOR
+#export EDITOR="/usr/local/bin/atom"
 export EDITOR="/usr/local/bin/subl -w"
 
 
