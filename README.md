@@ -52,9 +52,45 @@ or `(mkdir -p /tmp/dotfile && cd /tmp/dotfile && curl -L -G -d full=1 -d plat=ma
 
 Run the installer and enter credentials and allow the sync to run.
 
-// TODO: Enable "Share screenshots using Dropbox"
+Enable "Share screenshots using Dropbox" by taking a screenshot, and choosing to save it to Dropbox.
 
-#### Switch to Dropbox folder and start dotfile scripts
+#### Install Xcode command line tools.
+
+In Terminal, enter this command: `xcode-select --install`
+
+#### Xcode license
+
+In Terminal, enter this command and agree to the license: `sudo xcodebuild -license`
+
+#### Switch to Dropbox folder and start dotfile script
 
 In Terminal, enter these commands: `cd ~/Dropbox/Software/dotfile && sh ./install.sh`
+
+This installs the terminal dotfiles, home brew apps, and node.js dependencies.
+
+#### Install apps from Dropbox
+
+Open Dropbox folder and install apps including the node package installer.
+
+#### Run dock script
+
+Install either dock.sh or dock_macbook.sh from Terminal: `sh dock_macbook.sh`
+
+#### Unlock registered apps
+
+Unlock registerd apps with serial numbers stored in 1Password.
+
+
+
+#### Run settings script
+sh settings.sh
+
+#### Transfer files
+
+
+#### Addon extensions
+
+For Atom, Brackets, Coda, Sublime Text
+
+Sync up 1Password, Chronicle, Coda, Codekit, Moom, Sequel Pro, etc 
 

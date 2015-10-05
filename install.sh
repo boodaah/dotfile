@@ -9,22 +9,13 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # make in case they aren't already there
 sudo mkdir -p "/usr/local/lib"
 sudo mkdir -p "/usr/local/bin"
+mkdir -p ~/.npm
 
-# copy bash files
-cp .bash_aliases ~/.bash_aliases
-cp .bash_functions ~/.bash_functions
-cp .bash_profile ~/.bash_profile
-cp .bash_prompt ~/.bash_prompt
-cp .bashrc ~/.bashrc
-source ~/.bash_profile
-
-# copy git files
-cp .gitconfig ~/.gitconfig
-cp .gitignore_global ~/.gitignore_global
+# system 
+sh system.sh
 
 # homebrew
 sh homebrew.sh
 
-# settings
-sh settings.sh
-
+# node.js
+sh node.sh

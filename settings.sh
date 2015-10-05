@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# ==============================================
+# Initialize
+# ==============================================
+
 function CFPreferencesAppSynchronize() {
     python - <<END
 from Foundation import CFPreferencesAppSynchronize
@@ -7,7 +11,9 @@ CFPreferencesAppSynchronize('$1')
 END
 }
 
+# PlistBuddy directory
 PLIST=/usr/libexec/PlistBuddy
+
 
 # ==============================================
 # System Preferences
@@ -42,7 +48,6 @@ defaults write NSGlobalDomain "com.apple.keyboard.fnState" -bool true
 
 
 # Disable Caps Lock
-
 
 
 # Accessiblity
@@ -86,27 +91,41 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
 
 
+# Disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
+
+# Disable transparency in menu bar
+defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
+
+# Disable transparency in the menu bar and elsewhere on Yosemite
+# defaults write com.apple.universalaccess reduceTransparency -bool true
 
 
 
+# It is possible to completely disable OS X Dashboard. On old Mac’s this could save some memory and cpu resources. 
+# Use the following command and kill the current running Dashboard.
+defaults write com.apple.dashboard mcx-disabled -boolean true; killall Dock
 
-# ==============================================
-# Terminal
-# ==============================================
-echo "Setting Terminal preferences"
+# When you take a screenshot on Mac OS X there’s a shadow around the screenshot by default. 
+# Disable the shadow from the screenshot with this Terminal command:
+defaults write com.apple.screencapture disable-shadow -bool true; killall SystemUIServer
 
-FILE=~/Library/Preferences/com.apple.Terminal.plist
+# By default Dashboard appears as the first Spaces in mission control. 
+# If you are not a Dashboard user, you can hide Dashboard from appearing as Spaces with the following command:
+defaults write com.apple.dock dashboard-in-overlay -bool true; killall Dock
 
-# Set terminal window size 
-$PLIST -c "Delete ':Window Settings:Pro:rowCount'" $FILE &>/dev/null
-$PLIST -c "Add ':Window Settings:Pro:rowCount' integer 40" $FILE
-$PLIST -c "Delete ':Window Settings:Pro:columnCount'" $FILE &>/dev/null
-$PLIST -c "Add ':Window Settings:Pro:columnCount' integer 160" $FILE
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
-# Set "Pro" as the default
-defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
-defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
+# Expand print panel by default
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 
-CFPreferencesAppSynchronize "com.apple.Terminal"
+# Save to disk (not to iCloud) by default
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
-echo "Done."
+# Automatically quit printer app once the print jobs complete
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
+# Check for software updates daily, not just once per week
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+

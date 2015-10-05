@@ -4,73 +4,82 @@ if [ ! -f /usr/local/bin/brew ]; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+## Update brew
 brew update
 
+## Install brew apps
+brew install caskroom/cask/brew-cask
 brew install dos2unix
+# optional gettext
+brew install ffmpeg --with-faac         
+# installed: pkg-config, texi2html, yasm
+# recommeded: x264, lame, libvo-aacenc, xvid
+# optional: faac, openssl
 brew install git
+# optional gettext
 brew install libdvdcss
+brew install p7zip
 brew install tree
 brew install unrar
 brew install wget
-
-brew install ffmpeg --with-faac
-brew install caskroom/cask/brew-cask
-
+#recommened: openssl
 
 ## Install brew cask apps
-brew cask install 1password
-brew cask install appzapper
-# brew cask install asepsis
-brew cask install atom
-brew cask install bittorrent-sync
-brew cask install blender
-brew cask install brackets
-brew cask install burn
-brew cask install camtwist
-brew cask install ccleaner
-# brew cask install chrome-remote-desktop-host
-brew cask install chromecast
-brew cask install chronicle
-brew cask install clamxav
-brew cask install coda
-brew cask install codekit
-brew cask install colorpicker
 brew cask install colorpicker-hex
-brew cask install dropbox
-brew cask install firefox
-brew cask install flash
-brew cask install fontexplorer-x-pro
-brew cask install google-chrome
-brew cask install google-drive
-brew cask install handbrake
-brew cask install imagealpha
-brew cask install imageoptim
-brew cask install joinme
-brew cask install keepingyouawake
-brew cask install macdown
-brew cask install macx-youtube-downloader
-brew cask install mailbox
-brew cask install ocenaudio
-brew cask install renamer
-brew cask install screenflow
-brew cask install sequel-pro
-brew cask install skype
-brew cask install slack
-brew cask install steam
-brew cask install sublime-text
-brew cask install tower
-brew cask install transmit
 brew cask install vagrant
-brew cask install vagrant-manager
-brew cask install virtualbox
-brew cask install vlc
+
+## Software websites
+# brew cask home 1password
+# brew cask home appzapper
+# brew cask home atom
+# brew cask home blender
+# brew cask home brackets
+# brew cask home burn
+# brew cask home chronicle
+# brew cask home coda
+# brew cask home codekit
+# brew cask home colorpicker
+# brew cask home firefox
+# brew cask home google-chrome
+# brew cask home google-drive
+# brew cask home handbrake
+# brew cask home imagealpha
+# brew cask home imageoptim
+# brew cask home joinme
+# brew cask home macdown
+# brew cask home macx-youtube-downloader
+# brew cask home mailbox
+# brew cask home ocenaudio
+# brew cask home paw
+# brew cask home screenflow
+# brew cask home sequel-pro
+# brew cask home skype
+# open http://macphun.com/snapheal
+# brew cask home sublime-text
+# brew cask home thunderbird
+# brew cask home tower
+# brew cask home transmit
+# brew cask home vagrant-manager
+# brew cask home virtualbox
+# brew cask home vlc
+
+## MacBook only
+# brew cask home keepingyouawake
 
 
-## Install additional apps for iMac 
-# brew cask install battle-net
-# brew cask install logitech-gaming-software
-# brew cask install mumble
-# brew cask install obs
-# brew cask install transmission
-# brew cask install xld
-
+## iMac only 
+# brew cask home battle-net
+# brew cask home camtwist
+# open http://www.curse.com/client
+# open http://www.fulltilt.com/
+# open http://support.logitech.com/en_us/software/gaming-software-mac
+# brew cask home mumble
+# brew cask home obs
+# brew cask home private-internet-access
+# open http://www.arcgames.com/en/games/star-trek-online
+# brew cask home steam
+# open http://steelseries.com/downloads
+# brew cask home transmission
+# open http://www.ventrilo.com/download.php
+# brew cask home viber
+# brew cask home xld
