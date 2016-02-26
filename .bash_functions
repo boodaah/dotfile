@@ -26,6 +26,17 @@ function crlf2lf {
 }
 
 
+# rename files and folders with spaces in their names
+function spaces2periods {
+    for f in *\ *; do mv "$f" "${f// /.}"; done
+}
+
+
+function spaces2underscores {
+    for f in *\ *; do mv "$f" "${f// /_}"; done
+}
+
+
 # convert mkv files to mp4
 function ffcopy {
     ffmpeg -i $1 -c:v copy -c:a copy "${1%.*}.2ch.x264.mp4"

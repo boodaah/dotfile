@@ -6,16 +6,23 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# make in case they aren't already there
-sudo mkdir -p "/usr/local/lib"
-sudo mkdir -p "/usr/local/bin"
-mkdir -p ~/.npm
+## public key
+sh publickey.sh
 
-# system 
-sh system.sh
-
-# homebrew
+## homebrew
 sh homebrew.sh
 
-# node.js
+## node.js
 sh node.sh
+
+## composer
+sh composer.sh
+
+## homestead
+sh homestead.sh
+
+## /etc/hosts
+sh hosts.sh
+
+## ruby
+sh ruby.sh

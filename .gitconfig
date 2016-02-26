@@ -4,6 +4,6 @@
 [core]
     autocrlf = input
     excludesfile = /Users/kennethferguson/.gitignore_global
-    editor = atom --wait
+    editor = subl -n -w
 [push]
     default = simple

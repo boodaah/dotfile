@@ -11,10 +11,11 @@ python dockutil --add /Applications/Utilities/Terminal.app
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 
 ## Media
+python dockutil --add /Applications/DaVinci\ Resolve.app
 # python dockutil --add /Applications/Final\ Cut\ Pro.app
-# python dockutil --add /Applications/HandBrake.app
+python dockutil --add /Applications/HandBrake.app
 python dockutil --add /Applications/iBooks.app
-# python dockutil --add /Applications/iMovie.app
+python dockutil --add /Applications/iMovie.app
 python dockutil --add /Applications/iTunes.app
 python dockutil --add /Applications/Kindle.app
 
@@ -24,14 +25,13 @@ defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-ty
 python dockutil --add /Applications/FaceTime.app
 python dockutil --add /Applications/Messages.app
 python dockutil --add /Applications/Skype.app
-python dockutil --add /Applications/Slack.app
 # python dockutil --add /Applications/Viber.app
 
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 
 ## Productivity
 python dockutil --add /Applications/Calendar.app
-python dockutil --add /Applications/Chronicle.app
+# python dockutil --add /Applications/Chronicle.app
 python dockutil --add /Applications/Contacts.app
 # python dockutil --add ~/Library/Printers/EPSON\ XP-400\ Series.app
 python dockutil --add /Applications/PCalc.app
@@ -39,12 +39,6 @@ python dockutil --add /Applications/Reminders.app
 python dockutil --add /Applications/ScreenFlow.app
 
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-
-## Anonymous
-# python dockutil --add /Applications/Private\ Internet\ Access.app
-# python dockutil --add /Applications/Transmission.app
-
-# defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 
 ## Browsers
 python dockutil --add /Applications/Safari.app
@@ -55,38 +49,29 @@ defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-ty
 
 ## Email
 python dockutil --add /Applications/Mail.app
-# python dockutil --add /Applications/Mailbox\ \(Beta\).app
-# python dockutil --add /Applications/Thunderbird.app
-
-defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-
-## Text editors
-python dockutil --add /Applications/Atom.app
-python dockutil --add /Applications/Brackets.app
-python dockutil --add /Applications/Coda\ 2.app
-python dockutil --add /Applications/Sublime\ Text.app
-python dockutil --add /Applications/Xcode.app
 
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 
 ## Code
-python dockutil --add /Applications/CodeKit.app
+python dockutil --add /Applications/Coda\ 2.app
 python dockutil --add /Applications/Xcode.app/Contents/Applications/FileMerge.app
 python dockutil --add /Applications/MacDown.app
+python dockutil --add /Applications/Paw.app
 python dockutil --add /Applications/Sequel\ Pro.app
+python dockutil --add /Applications/Sublime\ Text.app
 python dockutil --add /Applications/Tower.app
 python dockutil --add /Applications/Transmit.app
 python dockutil --add /Applications/VirtualBox.app
+python dockutil --add /Applications/Xcode.app
 
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 
 ## Graphics
-# python dockutil --add /Applications/Affinity\ Designer.app
-# python dockutil --add /Applications/Affinity\ Photo.app
+python dockutil --add /Applications/Affinity\ Designer.app
+python dockutil --add /Applications/Affinity\ Photo.app
 python dockutil --add /Applications/Photos.app
 python dockutil --add /Applications/Pixelmator.app
 python dockutil --add /Applications/Preview.app
-python dockutil --add /Applications/Snapheal\ PRO.app
 
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 

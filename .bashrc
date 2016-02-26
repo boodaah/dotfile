@@ -17,22 +17,18 @@ export HISTSIZE=10000
 export HISTIGNORE="history*:man*"
 
 
+# set locale environment
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+
 # set PATH
 export PATH="~/.composer/vendor/bin:~/.npm/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 
 
 # set EDITOR
-#export EDITOR="/usr/local/bin/atom"
 export EDITOR="/usr/local/bin/subl -w"
-
-
-# set PAGER for man pages
-#export PAGER="col -b  | open -a /Applications/Safari.app -f"
-export PAGER="col -b  | open -a /Applications/Google\ Chrome.app -f"
-
-
-# set Homebrew Cask options
-export HOMEBREW_CASK_OPTS="--appdir=/Applications --fontdir=~/Fonts"
 
 
 # ALIASES
@@ -50,12 +46,5 @@ fi
 # PROMPT
 if [[ -f ~/.bash_prompt ]]; then
     source ~/.bash_prompt
-fi
-
-
-# EXTRA
-# use .extra for stuff you don't want to commit
-if [[ -f ~/.extra ]]; then
-    source ~/.extra
 fi
 
