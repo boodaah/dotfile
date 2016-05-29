@@ -13,16 +13,16 @@
 # composer update <vendor/package>
 
 # To update composer:
-# sudo composer self-update
+# composer self-update
 
 # To update the autoloader:
-# sudo composer dump-autoload -o
+# composer dump-autoload -o
 
 
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 
-sudo composer global require "laravel/installer"
+composer global require "laravel/installer"
 
-sudo composer global require "laravel/lumen-installer"
+composer global require "laravel/lumen-installer"
 
-sudo composer global require "laravel/homestead"
+composer global require "laravel/homestead"
