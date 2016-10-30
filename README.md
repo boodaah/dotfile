@@ -42,6 +42,10 @@ Open Terminal and enter: `bash -c "$(curl -fsSL https://goo.gl/Bamqzw)"`
 
 or `(mkdir -p /tmp/dotfile && cd /tmp/dotfile && curl -L -o terminal.sh https://raw.githubusercontent.com/boodaah/dotfile/master/terminal.sh && sh ./terminal.sh)`
 
+Enter: `bash -c "$curl -fsSL https://goo.gl/AZy16S)"`
+
+or `(cd ~ && curl -L -o .bashrc https://raw.githubusercontent.com/boodaah/dotfile/master/.bashrc && curl -L -o .bash_aliases https://raw.githubusercontent.com/boodaah/dotfile/master/.bash_aliases && curl -L -o .bash_functions https://raw.githubusercontent.com/boodaah/dotfile/master/.bash_functions && curl -L -o .bash_profile https://raw.githubusercontent.com/boodaah/dotfile/master/.bash_profile && curl -L -o .bash_prompt https://raw.githubusercontent.com/boodaah/dotfile/master/.bash_prompt)`
+
 Quit and restart Terminal.
 
 #### Download and install Dropbox
