@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
-# ==============================================
+# Do not include this line in the pull request
+
+# ===============================================
 # Initialize
-# ==============================================
+# ===============================================
 
 function CFPreferencesAppSynchronize() {
     python - <<END
