@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 
-# I don't want to bring this into github
-
-# ===============================================
+# ==============================================
 # Initialize
-# ===============================================
+# ==============================================
 
 function CFPreferencesAppSynchronize() {
     python - <<END
